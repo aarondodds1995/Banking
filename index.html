@@ -31,3 +31,41 @@
             border: none;
             cursor: pointer;
         }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #b4ebc1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Banking System</h1>
+
+    <label>Account Holder Name:</label>
+    <input type="text" id="holderName" placeholder="Enter name">
+
+    <label>Initial Balance:</label>
+    <input type="number" id="initialBalance" placeholder="Enter balance">
+
+    <button id="createAccount">Create Account</button>
+
+     <input type="text" id="accountNumber"
+     placeholder="Enter account number">
+
+    <label>Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <button id="depositBtn">Deposit</button>
+    <button id="withdrawBtn">Withdraw</button>
+    <button id="balanceBtn">Check Balance</button>
+
+    <div id="output"></div>
+</div>
+
+<script type="module" src="index.js"></script>
+
+</body>
+</html>
