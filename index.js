@@ -12,3 +12,9 @@ const balanceInput = document.getElementById("initialBalance");
 const accountNumberInput = document.getElementById("accountNumber");
 const amountInput = document.getElementById("amount");
 const output = document.getElementById("output");
+
+// Store all accounts
+const accounts = [];
+
+// Create Account
+createBtn.addEventListener("click", () => {
