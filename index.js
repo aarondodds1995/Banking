@@ -67,3 +67,26 @@ depositBtn.addEventListener("click", () => {
 
     output.textContent = account.deposit(amount);
 });
+
+// Withdraw
+withdrawBtn.addEventListener("click", () => {
+
+    const account = findAccount();
+
+    if (!account) return;
+
+    const amount = Number(amountInput.value);
+
+    output.textContent = account.withdraw(amount);
+});
+
+// Check Balance
+balanceBtn.addEventListener("click", () => {
+
+    const account = findAccount();
+
+    if (!account) return;
+
+    output.textContent =
+        `Current Balance: £${account.checkBalance()}`;
+});
