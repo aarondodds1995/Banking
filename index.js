@@ -55,3 +55,15 @@ function findAccount() {
 
     return account;
 }
+
+// Deposit
+depositBtn.addEventListener("click", () => {
+
+    const account = findAccount();
+
+    if (!account) return;
+
+    const amount = Number(amountInput.value);
+
+    output.textContent = account.deposit(amount);
+});
