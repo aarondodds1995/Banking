@@ -38,3 +38,20 @@ createBtn.addEventListener("click", () => {
     output.textContent =
         `Account created. Account Number: ${newAccount.accountNumber}`;
 });
+
+// Find account by number
+function findAccount() {
+
+    const enteredNumber = accountNumberInput.value.trim();
+
+    const account = accounts.find(acc =>
+        acc.accountNumber.toString() === enteredNumber
+    );
+
+    if (!account) {
+        output.textContent = "Account doesn't exist";
+        return null;
+    }
+
+    return account;
+}
