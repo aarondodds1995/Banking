@@ -18,3 +18,23 @@ const accounts = [];
 
 // Create Account
 createBtn.addEventListener("click", () => {
+
+    const holder = holderInput.value.trim();
+    const initialBalance = Number(balanceInput.value);
+
+    if (!holder) {
+        output.textContent = "Please enter account holder name.";
+        return;
+    }
+
+    const newAccount = new BankAccount(holder, initialBalance);
+
+    // Save account
+    accounts.push(newAccount);
+
+    // Display generated account number
+    accountNumberInput.value = newAccount.accountNumber;
+
+    output.textContent =
+        `Account created. Account Number: ${newAccount.accountNumber}`;
+});
